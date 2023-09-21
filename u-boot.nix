@@ -1,4 +1,4 @@
-{ mkShell, gnumake, bison, flex, swig, lz4, armTrustedFirmwareTools, python3, openssl, libuuid, gnutls }:
+{ mkShell, gnumake, bison, flex, swig, lz4, armTrustedFirmwareTools, e2fsprogs, python3, openssl, libuuid, gnutls }:
 # NOTE: enough to run `make check` in u-boot's source tree
 mkShell {
   name = "u-boot-shell";
@@ -9,6 +9,7 @@ mkShell {
     swig
     lz4
     armTrustedFirmwareTools
+    e2fsprogs
     (python3.withPackages (p: with p; [
       filelock
       libfdt
