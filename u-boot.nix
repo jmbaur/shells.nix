@@ -11,6 +11,7 @@ mkShell {
     armTrustedFirmwareTools
     e2fsprogs
     (python3.withPackages (p: with p; [
+      coverage
       filelock
       libfdt
       pycryptodomex
